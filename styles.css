@@ -562,30 +562,26 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); white-space: nowrap;
 }
 
-/* Analytics — soft card, not a hard strip */
-.analytics-strip {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--r-lg); padding: 2rem 2.5rem; margin-top: 3rem;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+.blog-empty {
+  margin-top: 0.5rem;
+  padding: 2.2rem 2rem;
+  border: 1px dashed var(--border-mid);
+  border-radius: var(--r-lg);
+  background: var(--surface);
   box-shadow: 0 4px 24px var(--shadow);
-  position: relative; overflow: hidden;
 }
-/* Teal wash bloom inside analytics */
-.analytics-strip::before {
-  content: '';
-  position: absolute; top: -40px; right: -40px;
-  width: 200px; height: 200px;
-  background: radial-gradient(circle, var(--wash-teal), transparent 60%);
-  border-radius: 50%; pointer-events: none; opacity: 0.7;
+.blog-empty-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--teal);
+  margin-bottom: 0.55rem;
 }
-.analytics-item { text-align: center; position: relative; z-index: 1; }
-.analytics-val {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.9rem;
-  font-weight: 400; color: var(--teal); line-height: 1;
-}
-.analytics-lbl {
-  font-family: 'DM Mono', monospace; font-size: 0.57rem;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-top: 0.35rem;
+.blog-empty-text {
+  color: var(--text2);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  max-width: 560px;
 }
 
 /* ── CONTACT ──────────────────────────────────────────────────── */
@@ -602,6 +598,9 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 6rem; align-items: start; position: relative; z-index: 1;
+}
+.contact-grid.contact-links-only {
+  grid-template-columns: minmax(0, 680px);
 }
 
 .contact-links { display: flex; flex-direction: column; gap: 1rem; }
@@ -627,50 +626,6 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
 }
 .contact-link-value { font-size: 0.87rem; color: var(--text); margin-top: 0.12rem; }
 .contact-link:hover .contact-link-value { color: var(--teal); }
-
-/* Form — soft card */
-.contact-form-wrap {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--r-lg); padding: 2.5rem;
-  box-shadow: 0 8px 40px var(--shadow);
-  position: relative; overflow: hidden;
-}
-.contact-form-wrap::before {
-  content: '';
-  position: absolute; bottom: -50px; right: -50px;
-  width: 200px; height: 200px;
-  background: radial-gradient(circle, var(--wash-sage), transparent 65%);
-  border-radius: 50%; pointer-events: none;
-}
-
-.form-group { margin-bottom: 1.3rem; }
-.form-label {
-  font-family: 'DM Mono', monospace; font-size: 0.6rem;
-  letter-spacing: 0.15em; text-transform: uppercase; color: var(--text3);
-  display: block; margin-bottom: 0.5rem;
-}
-.form-input, .form-textarea {
-  width: 100%; padding: 0.85rem 1.1rem;
-  background: var(--bg); border: 1px solid var(--border-mid);
-  border-radius: var(--r-sm);
-  color: var(--text); font-family: 'Jost', sans-serif;
-  font-size: 0.92rem; font-weight: 300; outline: none; resize: none; appearance: none;
-  transition: border-color 0.25s, box-shadow 0.25s;
-}
-.form-input:focus, .form-textarea:focus {
-  border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-pale);
-}
-.form-textarea { height: 130px; }
-.form-submit {
-  width: 100%; padding: 1rem; background: var(--teal); color: #fff;
-  border: none; cursor: pointer; font-family: 'DM Mono', monospace;
-  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
-  border-radius: var(--r-pill);
-  transition: background 0.25s, box-shadow 0.25s, transform 0.2s;
-}
-.form-submit:hover {
-  background: var(--teal-mid); box-shadow: 0 6px 24px var(--teal-glow); transform: translateY(-1px);
-}
 
 /* ── FOOTER ───────────────────────────────────────────────────── */
 footer {
@@ -733,6 +688,5 @@ footer {
   #about::before, #projects::before, #blog::before, #contact::before { display: none; }
   .hero-stats { gap: 2.5rem; margin-top: 4rem; }
   .blog-item { grid-template-columns: 1fr; gap: 0.3rem; }
-  .analytics-strip { grid-template-columns: 1fr 1fr; padding: 1.5rem; }
   footer { flex-direction: column; align-items: flex-start; }
 }

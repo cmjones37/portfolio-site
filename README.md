@@ -10,7 +10,7 @@ Built with vanilla HTML, CSS, and JavaScript. Designed with a watercolour botani
 
 ## Background
 
-This portfolio was built as a deliberate product artifact. The process was run the same way I run any product: starting with a PRD that defined user stories (hiring managers, recruiters, peers), success metrics (time on site, recruiter inquiries, AI insights engagement), tech stack decisions with documented rationale, and a prioritised risk log.
+This portfolio was built as a deliberate product artifact. The process was run the same way I run any product: starting with a PRD that defined user stories (hiring managers, recruiters, peers), success metrics, tech stack decisions with documented rationale, and a prioritised risk log.
 
 The design intent was equally considered. A detailed brief was used as part of AI prompting to produce a design that represents me personally as opposed to boilerplate outputs. This design is structured to be able to be used across other projects instead of needing to reproduce it each time for better efficiency and consistency. 
 
