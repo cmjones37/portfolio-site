@@ -199,8 +199,10 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
 #home {
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 10rem 2.5rem 6rem;
-  position: relative; overflow: hidden;
+  padding: 10rem 2.5rem 8rem;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
 }
 
 /* ── WATERCOLOUR BOTANICAL BACKGROUND ───────────────────────── */
@@ -212,7 +214,8 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
 */
 .wc-canvas {
   position: absolute; inset: 0;
-  pointer-events: none; overflow: hidden;
+  pointer-events: none;
+  overflow: visible;
 }
 
 /* ── HERO CONTENT ─────────────────────────────────────────────── */

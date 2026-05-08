@@ -52,7 +52,7 @@
     /* Bottom-left — secondary, smaller composition */
     .wc-secondary {
       left: -60px;
-      bottom: -80px;
+      bottom: -24px;
       width: 400px;
       height: 480px;
       opacity: 1;
@@ -68,6 +68,73 @@
     /* In dark mode, reduce opacity slightly */
     [data-theme="dark"] .wc-main { opacity: 0.7; }
     [data-theme="dark"] .wc-secondary { opacity: 0.6; }
+
+    /* Responsive botanical scaling/positioning */
+    @media (max-width: 1200px) {
+      .wc-main {
+        right: -130px;
+        top: -50px;
+        width: 560px;
+        height: 660px;
+      }
+      .wc-secondary {
+        left: -85px;
+        bottom: -14px;
+        width: 350px;
+        height: 430px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .wc-main {
+        right: -185px;
+        top: -40px;
+        width: 500px;
+        height: 600px;
+        opacity: 0.88;
+      }
+      .wc-secondary {
+        left: -105px;
+        bottom: -4px;
+        width: 300px;
+        height: 370px;
+        opacity: 0.8;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wc-main {
+        right: -215px;
+        top: 35px;
+        width: 430px;
+        height: 510px;
+        opacity: 0.6;
+      }
+      .wc-secondary {
+        left: -76px;
+        bottom: 12px;
+        width: 250px;
+        height: 305px;
+        opacity: 0.54;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wc-main {
+        right: -230px;
+        top: 58px;
+        width: 385px;
+        height: 455px;
+        opacity: 0.46;
+      }
+      .wc-secondary {
+        left: -68px;
+        bottom: 24px;
+        width: 210px;
+        height: 260px;
+        opacity: 0.42;
+      }
+    }
   </style>
 </head>
 <body>
