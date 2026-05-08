@@ -3,74 +3,134 @@
      File: components/hero.html
      ══════════════════════════════════════════════════ -->
 <section id="home">
+  <div class="wc-canvas" aria-hidden="true">
+    <svg class="wc-main" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="wc-bloom" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="8" result="blur"/>
+          <feColorMatrix type="saturate" values="1.3" in="blur" result="sat"/>
+          <feComposite in="sat" in2="SourceGraphic" operator="over"/>
+        </filter>
+        <filter id="wc-wash" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="18"/>
+        </filter>
+        <filter id="wc-full" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="7" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="14" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+          <feGaussianBlur stdDeviation="7" in="displaced" result="blurred"/>
+          <feColorMatrix type="saturate" values="1.2" in="blurred"/>
+        </filter>
+        <filter id="wc-vein" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur stdDeviation="1.2"/>
+        </filter>
+      </defs>
 
-  <!-- Botanical background illustration -->
-  <div class="hero-botanical-bg" aria-hidden="true">
-    <!-- Large botanical right -->
-    <svg class="botanical-right" viewBox="0 0 480 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Main stem -->
-      <path d="M240 580 C240 580 238 420 220 360 C200 290 160 260 140 200 C120 140 150 60 170 20" stroke="#4a5c3a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <!-- Branch left 1 -->
-      <path d="M200 380 C170 360 120 340 80 310 C50 288 30 260 20 230" stroke="#4a5c3a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Leaf 1 -->
-      <path d="M80 310 C95 285 130 270 150 250 C130 265 100 278 80 310Z" fill="#4a5c3a"/>
-      <!-- Branch right 1 -->
-      <path d="M230 340 C260 320 310 310 350 290 C385 272 410 248 430 220" stroke="#4a5c3a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Leaf 2 -->
-      <path d="M350 290 C360 262 385 248 400 230 C380 245 358 260 350 290Z" fill="#4a5c3a"/>
-      <!-- Branch left 2 -->
-      <path d="M185 280 C155 265 110 258 70 240 C40 226 18 204 8 178" stroke="#4a5c3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- Leaf 3 -->
-      <path d="M70 240 C82 215 108 204 124 190 C104 200 78 215 70 240Z" fill="#4a5c3a"/>
-      <!-- Branch right 2 -->
-      <path d="M210 230 C240 212 285 205 325 188 C358 172 380 150 395 124" stroke="#4a5c3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- Small leaves -->
-      <path d="M325 188 C332 165 350 152 362 138 C344 150 328 166 325 188Z" fill="#4a5c3a"/>
-      <!-- Top leaves -->
-      <path d="M155 80 C170 55 185 40 195 20 C178 38 162 56 155 80Z" fill="#4a5c3a"/>
-      <path d="M175 95 C198 78 215 68 228 52 C208 65 190 80 175 95Z" fill="#4a5c3a"/>
-      <!-- Tiny dots / flower buds -->
-      <circle cx="20" cy="228" r="3.5" fill="#4a5c3a"/>
-      <circle cx="8" cy="176" r="2.5" fill="#4a5c3a"/>
-      <circle cx="430" cy="218" r="3.5" fill="#4a5c3a"/>
-      <circle cx="395" cy="122" r="2.5" fill="#4a5c3a"/>
+      <g filter="url(#wc-wash)">
+        <ellipse cx="320" cy="240" rx="155" ry="210" transform="rotate(-28 320 240)" fill="#6a8250" opacity="0.11"/>
+      </g>
+      <g filter="url(#wc-full)">
+        <path d="M380 80 C420 100 450 150 445 210 C440 270 405 320 360 350 C315 380 258 385 218 365 C178 345 158 300 162 255 C166 210 196 168 238 145 C280 122 340 60 380 80Z" fill="#5a7244" opacity="0.14"/>
+      </g>
+      <g filter="url(#wc-bloom)">
+        <path d="M370 95 C405 118 428 168 420 222 C412 276 376 318 332 340 C288 362 240 358 208 335 C176 312 165 272 175 232 C185 192 218 158 260 142 C302 126 335 72 370 95Z" fill="#4a6238" opacity="0.12"/>
+      </g>
+      <g filter="url(#wc-vein)">
+        <path d="M285 355 C296 318 308 275 310 235 C312 195 300 158 286 128" stroke="#3a4f2c" stroke-width="1.2" fill="none" opacity="0.22" stroke-linecap="round"/>
+        <path d="M295 300 C268 292 244 288 222 292" stroke="#3a4f2c" stroke-width="0.7" fill="none" opacity="0.15" stroke-linecap="round"/>
+        <path d="M302 260 C278 250 254 248 232 255" stroke="#3a4f2c" stroke-width="0.7" fill="none" opacity="0.15" stroke-linecap="round"/>
+        <path d="M305 220 C282 210 260 210 240 218" stroke="#3a4f2c" stroke-width="0.7" fill="none" opacity="0.15" stroke-linecap="round"/>
+      </g>
+
+      <g filter="url(#wc-wash)">
+        <ellipse cx="260" cy="400" rx="130" ry="175" transform="rotate(15 260 400)" fill="#3a8080" opacity="0.09"/>
+      </g>
+      <g filter="url(#wc-full)">
+        <path d="M210 310 C235 285 275 270 308 278 C341 286 365 315 368 348 C371 381 350 414 318 430 C286 446 248 440 224 420 C200 400 185 335 210 310Z" fill="#2e8a8a" opacity="0.11"/>
+      </g>
+      <g filter="url(#wc-bloom)">
+        <path d="M220 325 C242 302 276 292 305 302 C334 312 352 340 350 368 C348 396 328 420 302 430 C276 440 246 430 228 410 C210 390 198 348 220 325Z" fill="#267878" opacity="0.10"/>
+      </g>
+
+      <g filter="url(#wc-wash)">
+        <ellipse cx="420" cy="140" rx="55" ry="100" transform="rotate(-45 420 140)" fill="#88a850" opacity="0.10"/>
+      </g>
+      <g filter="url(#wc-full)">
+        <path d="M455 60 C475 85 478 120 465 148 C452 176 428 192 406 185 C384 178 372 154 378 128 C384 102 405 78 430 65 C440 59 450 55 455 60Z" fill="#7a9e44" opacity="0.13"/>
+      </g>
+
+      <g filter="url(#wc-vein)">
+        <path d="M300 490 C298 455 292 420 285 390 C282 375 278 360 284 348" stroke="#4a6238" stroke-width="2.5" fill="none" opacity="0.18" stroke-linecap="round"/>
+        <path d="M220 440 C235 420 255 405 275 395" stroke="#4a6238" stroke-width="1.5" fill="none" opacity="0.14" stroke-linecap="round"/>
+      </g>
+
+      <g filter="url(#wc-wash)">
+        <ellipse cx="355" cy="170" rx="30" ry="22" fill="#3a6038" opacity="0.13"/>
+        <ellipse cx="220" cy="310" rx="22" ry="18" fill="#2a7a7a" opacity="0.12"/>
+        <ellipse cx="410" cy="330" rx="18" ry="26" fill="#5a8248" opacity="0.10"/>
+        <ellipse cx="340" cy="130" rx="40" ry="28" fill="#c0905a" opacity="0.06"/>
+      </g>
+
+      <g filter="url(#wc-wash)" opacity="0.5">
+        <ellipse cx="290" cy="240" rx="100" ry="130" transform="rotate(-20 290 240)" fill="#f0e8d8" opacity="0.25"/>
+      </g>
     </svg>
 
-    <!-- Small botanical left -->
-    <svg class="botanical-left" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M160 390 C158 280 150 220 130 170 C110 115 80 85 70 40" stroke="#4a5c3a" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <path d="M135 250 C108 235 72 225 45 208 C22 193 8 172 2 148" stroke="#4a5c3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M45 208 C58 186 82 174 96 158 C78 172 52 186 45 208Z" fill="#4a5c3a"/>
-      <path d="M148 195 C172 178 204 170 228 155 C248 142 262 124 268 102" stroke="#4a5c3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M228 155 C236 134 254 122 264 106 C246 120 230 136 228 155Z" fill="#4a5c3a"/>
-      <circle cx="2" cy="146" r="2.8" fill="#4a5c3a"/>
-      <circle cx="268" cy="100" r="2.8" fill="#4a5c3a"/>
+    <svg class="wc-secondary" viewBox="0 0 360 440" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="wc-wash-b" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="16"/>
+        </filter>
+        <filter id="wc-full-b" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="13" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="G" yChannelSelector="R" result="displaced"/>
+          <feGaussianBlur stdDeviation="6" in="displaced"/>
+        </filter>
+        <filter id="wc-bloom-b" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="6"/>
+        </filter>
+      </defs>
+
+      <g filter="url(#wc-wash-b)">
+        <ellipse cx="200" cy="200" rx="130" ry="168" transform="rotate(-20 200 200)" fill="#6a8250" opacity="0.12"/>
+      </g>
+      <g filter="url(#wc-full-b)">
+        <path d="M250 70 C285 92 305 140 298 190 C291 240 258 278 218 285 C178 292 142 268 130 232 C118 196 136 152 168 130 C200 108 215 48 250 70Z" fill="#527042" opacity="0.13"/>
+      </g>
+      <g filter="url(#wc-bloom-b)">
+        <path d="M242 88 C272 110 285 154 276 196 C267 238 238 266 205 270 C172 274 144 252 138 220 C132 188 150 152 180 136 C210 120 212 66 242 88Z" fill="#426030" opacity="0.11"/>
+      </g>
+
+      <g filter="url(#wc-wash-b)">
+        <ellipse cx="150" cy="310" rx="100" ry="128" transform="rotate(12 150 310)" fill="#307878" opacity="0.09"/>
+      </g>
+      <g filter="url(#wc-full-b)">
+        <path d="M100 240 C126 218 165 215 192 228 C219 241 232 272 226 302 C220 332 196 354 168 356 C140 358 116 338 108 312 C100 286 74 262 100 240Z" fill="#286868" opacity="0.12"/>
+      </g>
+
+      <g filter="url(#wc-wash-b)">
+        <ellipse cx="220" cy="155" rx="24" ry="18" fill="#3a5830" opacity="0.13"/>
+        <ellipse cx="140" cy="278" rx="18" ry="22" fill="#286868" opacity="0.11"/>
+        <ellipse cx="178" cy="210" rx="40" ry="30" fill="#e8d8b0" opacity="0.14"/>
+      </g>
     </svg>
   </div>
 
-  <!-- Colour washes -->
-  <div class="hero-wash" aria-hidden="true"></div>
-  <div class="hero-wash-2" aria-hidden="true"></div>
-
-  <!-- Content -->
   <div class="hero-content">
     <div class="hero-eyebrow">Product Manager · AI Integrations</div>
-
-    <h1>
-      <span class="name-given">Christine</span>
-      <span class="name-family">Jones</span>
-    </h1>
-
+    <div class="hero-name">
+      <h1>
+        <span class="name-given">Christine</span>
+        <span class="name-family">Jones</span>
+      </h1>
+    </div>
     <p class="hero-tagline">
-      Building products at the intersection of user needs, business goals, and
-      emerging AI — from strategy to shipped.
+      Building products at the intersection of user needs, business goals,
+      and emerging AI — from strategy to shipped.
     </p>
-
     <div class="cta-row">
       <a href="#projects" class="btn-primary">View My Work →</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
-
     <div class="hero-stats reveal-stagger">
       <div>
         <div class="stat-num">AI</div>
@@ -84,12 +144,10 @@
         <div class="stat-num">10</div>
         <div class="stat-label">Years in Life Sciences</div>
       </div>
-
       <div>
         <div class="stat-num">0→1</div>
         <div class="stat-label">Builder</div>
       </div>
     </div>
   </div>
-
 </section>
