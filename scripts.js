@@ -107,27 +107,6 @@
   // Expose to inline onclick attributes
   window.toggleProject = toggleProject;
 
-  /* ── CONTACT FORM ──────────────────────────────────────────── */
-  function handleSubmit() {
-    const name = document.getElementById('contact-name')?.value.trim();
-    const email = document.getElementById('contact-email')?.value.trim();
-    const message = document.getElementById('contact-message')?.value.trim();
-
-    if (!name || !email || !message) {
-      alert('Please fill in all fields before sending.');
-      return;
-    }
-
-    // Form isn't wired to a backend yet — inform politely
-    alert(
-      'Thanks for reaching out, ' + name + '! ' +
-      'This form isn\'t connected to a backend yet — please email ' +
-      'hello@christinejones.pm directly.'
-    );
-  }
-
-  window.handleSubmit = handleSubmit;
-
   function initNavBehavior() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
