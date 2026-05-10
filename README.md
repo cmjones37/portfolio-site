@@ -4,7 +4,7 @@
 
 Built with vanilla HTML, CSS, and JavaScript. Designed with a watercolour botanical aesthetic, warm parchment palette, and teal accent. The site itself is a product artifact — conceived with a full PRD, designed with a clear user in mind (you), and iterated based on feedback.
 
-**Live site:** [christinejones.pm](https://christinejones.pm) <!-- Update with your actual URL -->
+**Live site:** [[christinemjones.netlify.app](https://christinemjones.netlify.app/)] <!-- Update with your actual URL -->
 
 ---
 
