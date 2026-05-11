@@ -14,8 +14,6 @@ This portfolio was built as a deliberate product artifact. The process was run t
 
 The design intent was equally considered. A detailed brief was used as part of AI prompting to produce a design that represents me personally as opposed to boilerplate outputs. This design is structured to be able to be used across other projects instead of needing to reproduce it each time for better efficiency and consistency. 
 
-The PRD is included on the site as a project case study — a deliberate choice to show that the thinking behind the build is as much a part of the work as the build itself.
-
 ---
 
 ## Features
@@ -25,7 +23,6 @@ The PRD is included on the site as a project case study — a deliberate choice 
 - **Scroll reveal animations** — `IntersectionObserver`-driven fade-and-rise on all major sections, with no scroll event listeners blocking the main thread
 - **Expandable project cards** — each case study has a collapsible detail panel covering problem, process, and outcome
 - **AI Insights** — a recruiter-facing lens on each project, surfacing the strategic significance of the work
-- **Contact form** — structured to connect to any form backend without changing the HTML
 - **Fully responsive** — single-column on mobile, two-column grids at tablet and above
 
 ---
@@ -38,7 +35,6 @@ Accessibility was treated as a first-class requirement, not an afterthought — 
 - All decorative SVGs marked `aria-hidden="true"` so screen readers skip illustration content
 - Visible focus states on all interactive elements with a 3px teal focus ring
 - Colour contrast meets WCAG 2.1 AA across all text and background combinations in both light and dark modes
-- Form inputs paired with `<label>` elements via `for` / `id` attributes
 - Blog list items use `role="link"` and `tabindex="0"` for full keyboard navigation
 - Theme toggle has a descriptive `aria-label`
 
