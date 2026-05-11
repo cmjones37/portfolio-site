@@ -492,7 +492,15 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
 }
 .project-meta { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 1.35rem; }
 
-.project-expand {
+.project-expand-1 {
+  font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text3);
+  display: flex; align-items: center; gap: 0.5rem;
+  cursor: pointer; background: none; border: none; padding: 0;
+  transition: color 0.2s;
+
+}
+.project-expand-2 {
   font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--text3);
   display: flex; align-items: center; gap: 0.5rem;
