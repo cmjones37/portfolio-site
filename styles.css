@@ -691,8 +691,9 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 1rem 1.25rem; }
   .nav-links { display: none; }
+  .theme-toggle { flex-shrink: 0; }
   section { padding: 5rem 1.25rem; }
-  #home { padding: 8rem 1.25rem 4rem; }
+  #home { padding: 8rem 1.25rem 4rem; overflow: hidden; }
   #about::before, #projects::before, #blog::before, #contact::before { display: none; }
   .hero-stats { gap: 2.5rem; margin-top: 4rem; }
   .blog-item { grid-template-columns: 1fr; gap: 0.3rem; }
