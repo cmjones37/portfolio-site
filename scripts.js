@@ -9,6 +9,8 @@
     nav: 'components/nav.html',
     hero: 'components/hero.html',
     about: 'components/about.html',
+    projects: 'components/projects.html',
+    blog: 'components/blog.html',
     'contact-footer': 'components/contact-footer.html'
   };
 
