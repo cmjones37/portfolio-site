@@ -437,6 +437,7 @@ nav.scrolled { box-shadow: 0 4px 40px var(--shadow); }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
+  align-items: start;
 }
 
 .project-card {
