@@ -4,7 +4,11 @@
 
 Built with vanilla HTML, CSS, and JavaScript. Designed with a watercolour botanical aesthetic, warm parchment palette, and teal accent. The site itself is a product artifact — conceived with a full PRD, designed with a clear user in mind (you), and iterated based on feedback.
 
-**Live site:** [[christinemjones.netlify.app](https://christinemjones.netlify.app/)] <!-- Update with your actual URL -->
+**Live site:** [christinemjones.com](https://christinemjones.com)
+
+[![PRD](https://img.shields.io/badge/docs-PRD-3c4f2c)](./docs/PRD_portfolio-site.md)
+
+The thinking behind this project is documented in the [PRD](./docs/PRD_portfolio-site.md).
 
 ---
 
