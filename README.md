@@ -6,6 +6,10 @@ Built with vanilla HTML, CSS, and JavaScript. Designed with a watercolour botani
 
 **Live site:** [[christinemjones.netlify.app](https://christinemjones.netlify.app/)] <!-- Update with your actual URL -->
 
+[![PRD](https://img.shields.io/badge/docs-PRD-3c4f2c)](./docs/PRD_portfolio-site.md)
+
+The thinking behind this project is documented in the [PRD](./docs/PRD_portfolio-site.md).
+
 ---
 
 ## Background
