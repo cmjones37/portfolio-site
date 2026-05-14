@@ -109,6 +109,21 @@
   // Expose to inline onclick attributes
   window.toggleProject = toggleProject;
 
+  function initBlogItems() {
+    document.querySelectorAll('.blog-item[role="link"]').forEach((item) => {
+      const href = item.getAttribute('data-href');
+      if (!href) return;
+
+      item.addEventListener('click', () => window.open(href, '_blank', 'noopener'));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.open(href, '_blank', 'noopener');
+        }
+      });
+    });
+  }
+
   function initNavBehavior() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -149,6 +164,7 @@
     initThemeToggle();
     initScrollReveal();
     initNavBehavior();
+    initBlogItems();
   }
 
   boot();
