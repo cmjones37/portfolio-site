@@ -1,6 +1,6 @@
 # Portfolio Site: A product manager's portfolio, built as a product
 
-[<img src="docs/prd-icon.png" width="52" alt="PRD icon" />](./docs/PRD_portfolio-site.md) The thinking behind this project is documented in the [PRD](./docs/PRD_portfolio-site.md).
+[<img src="docs/prd-icon.PNG" width="60" alt="PRD icon" />](./docs/PRD_portfolio-site.md) The thinking behind this project is documented in the [PRD](./docs/PRD_portfolio-site.md).
 
 ---
 
