@@ -16,7 +16,7 @@
             <div class="project-meta">
               <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Netlify</span>
             </div>
-            <button class="project-expand-1" onclick="toggleProject(this)"><span>View Details</span><span class="arrow">↓</span></button>
+            <button class="project-expand" onclick="toggleProject(this)"><span>View Details</span><span class="arrow">↓</span></button>
             <div class="project-details">
               <p><strong>What it is:</strong> The live site you are currently viewing, designed and built to communicate product thinking and technical execution in one place.</p>
               <p><strong>What I built:</strong> Component-based page structure, interactive project cards, dark/light theming, and fully responsive layouts across breakpoints.</p>
@@ -32,12 +32,28 @@
             <div class="project-meta">
               <span class="tag">AI</span><span class="tag">Research</span><span class="tag">Product Strategy</span>
             </div>
-            <button class="project-expand-2" onclick="toggleProject(this)"><span>View Details</span><span class="arrow">↓</span></button>
+            <button class="project-expand" onclick="toggleProject(this)"><span>View Details</span><span class="arrow">↓</span></button>
             <div class="project-details">
               <p><strong>What it is:</strong> A focused project for turning persona-level information into practical insight summaries for teams.</p>
               <p><strong>What I built:</strong> Structured workflows for collecting persona context, surfacing meaningful patterns, and packaging results for decision-making.</p>
               <p><strong>Repository:</strong> <a href="https://github.com/cmjones37/persona-insights" target="_blank" rel="noopener noreferrer">github.com/cmjones37/persona-insights</a></p>
               <div class="ai-insight"><div class="ai-insight-label">✦ AI Insight</div>Shows practical AI application grounded in real product research and communication needs.</div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-type">AI Tooling · Release Communications</div>
+            <div class="project-title">Release Handover</div>
+            <p class="project-desc">An AI-powered tool that transforms PRDs into tailored first-draft communications for stakeholder audiences (e.g., customers, GTM, leadership) in a single workflow.</p>
+            <div class="project-meta">
+              <span class="tag">AI</span><span class="tag">Claude API</span><span class="tag">JavaScript</span><span class="tag">Prompt Architecture</span>
+            </div>
+            <button class="project-expand" onclick="toggleProject(this)"><span>View Details</span><span class="arrow">↓</span></button>
+            <div class="project-details">
+              <p><strong>What it is:</strong> A tool that takes one or more PRD markdown files and generates audience-specific release documentation to eliminate the manual rewriting when updating multiple stakeholder groups with varying context needs.</p>
+              <p><strong>What I built:</strong> Four distinct Claude API prompts engineered to extract and transform different slices of PRD content per stakeholder, with inline gap-flagging to prevent hallucination, multi-PRD synthesis into a single output per audience, and downloadable ZIP export — all within an interface built on the same design system as this portfolio.</p>
+              <p><strong>Repository:</strong> <a href="https://github.com/cmjones37/release-handover" target="_blank" rel="noopener noreferrer">github.com/cmjones37/release-handover</a></p>
+              <div class="ai-insight"><div class="ai-insight-label">✦ AI Insight</div>Demonstrates applied prompt engineering as a product design discipline — engineering how the model extracts, transforms, and flags gaps rather than infers.</div>
             </div>
           </div>
         </div>
